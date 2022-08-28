@@ -28,7 +28,14 @@ namespace MaidFinderWebAPI.Controllers
             return await _context.Candidate.ToListAsync();
         }
 
+        [HttpPost]
+        public async Task<ActionResult<Candidate>> CreateCandidate(Candidate candidate)
+        {
+            _context.Candidate.Add(candidate);
+            await _context.SaveChangesAsync();
 
+            return CreatedAtAction("GetFoodItems", new { id = candidate.CandidateID }, candidate);
+        }
 
 
     }

@@ -11,7 +11,7 @@ import Home from './components/Home';
 function App() {
   return (
     <div className="App">
-      hello2
+      App.js
 <div>
 <BrowserRouter>
       <Routes>

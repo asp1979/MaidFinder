@@ -15,7 +15,7 @@ export default function Signup(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    createAPIEndpoint(ENDPIONTS.FOODITEM).create({fooditemId:0, fooditemname:inputs.username, price:inputs.age})
+    createAPIEndpoint(ENDPIONTS.CANDIDATE).create({CandidateID:0, FirstName:inputs.FirstName, LastName:inputs.LastName})
     .then(res => {
     })
     .catch(err => console.log(err));
@@ -27,21 +27,21 @@ export default function Signup(props) {
     <form onSubmit={handleSubmit}>
           <div>
             {inputs.username}</div>
-      <label>Enter your name:
+      <label>Enter First Name:
       <input 
         type="text" 
-        name="username" 
-        value={inputs.username || ""} 
+        name="FirstName" 
+        value={inputs.FirstName || ""} 
         onChange={handleChange}
       />
       </label>
-      <label>Enter your age:
-        <input 
-          type="number" 
-          name="age" 
-          value={inputs.age || ""} 
-          onChange={handleChange}
-        />
+      <label>Enter Last Name:
+      <input 
+        type="text" 
+        name="LastName" 
+        value={inputs.LastName || ""} 
+        onChange={handleChange}
+      />
         </label>
         <input type="submit" />
     </form>
