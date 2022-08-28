@@ -1,22 +1,50 @@
 import React, { Component } from "react";
- 
-class Signup extends Component {
-  render() {
-    return (
-      <div>
-        <h2>STUFF</h2>
-        <p>Mauris sem velit, vehicula eget sodales vitae,
-        rhoncus eget sapien:</p>
-        <ol>
-          <li>Nulla pulvinar diam</li>
-          <li>Facilisis bibendum</li>
-          <li>Vestibulum vulputate</li>
-          <li>Eget erat</li>
-          <li>Id porttitor</li>
-        </ol>
-      </div>
-    );
+import { useState } from 'react';
+import { createAPIEndpoint, ENDPIONTS } from "./Shared/api";
+
+
+export default function Signup(props) {
+
+  const [inputs, setmyInputs] = useState({});
+
+  const handleChange = (event) => {
+    const name = event.target.name;
+    const value = event.target.value;
+    setmyInputs(values => ({...values, [name]: value}))
   }
-}
- 
-export default Signup;
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    createAPIEndpoint(ENDPIONTS.FOODITEM).create({fooditemId:0, fooditemname:inputs.username, price:inputs.age})
+    .then(res => {
+    })
+    .catch(err => console.log(err));
+  }
+
+  
+  return (
+
+    <form onSubmit={handleSubmit}>
+          <div>
+            {inputs.username}</div>
+      <label>Enter your name:
+      <input 
+        type="text" 
+        name="username" 
+        value={inputs.username || ""} 
+        onChange={handleChange}
+      />
+      </label>
+      <label>Enter your age:
+        <input 
+          type="number" 
+          name="age" 
+          value={inputs.age || ""} 
+          onChange={handleChange}
+        />
+        </label>
+        <input type="submit" />
+    </form>
+  )
+ }
+

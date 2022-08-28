@@ -1,12 +1,25 @@
 import React, { Component } from "react";
- 
+import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
+import SendIcon from '@mui/icons-material/Send';
+import Stack from '@mui/material/Stack';
+
+
 class Profile extends Component {
   render() {
     return (
-      <div>
-        <h2>Profile</h2>
-      </div>
-    );
+     
+      <Stack direction="row" spacing={2}>
+      <Button variant="outlined" startIcon={<DeleteIcon />}>
+        Delete
+      </Button>
+      <Button variant="contained" endIcon={<SendIcon />}>
+        Send
+      </Button>
+    </Stack>
+   
+  );
+
   }
 }
  
