@@ -33,8 +33,10 @@ namespace MaidFinderWebAPI.Migrations
 
             modelBuilder.Entity("MaidFinderWebAPI.Model.Candidate", b =>
                 {
-                    b.Property<string>("CandidateID")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("CandidateID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(100)");

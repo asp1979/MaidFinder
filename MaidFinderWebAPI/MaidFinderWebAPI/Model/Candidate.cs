@@ -9,8 +9,9 @@ namespace MaidFinderWebAPI.Model
 {
     public class Candidate
     {
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Key]
-        public string CandidateID { get; set; }
+        public int CandidateID { get; set; }
 
         [Column(TypeName = "nvarchar(100)")]
         public string FirstName {get; set;}

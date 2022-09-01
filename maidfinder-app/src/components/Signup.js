@@ -15,7 +15,7 @@ export default function Signup(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    createAPIEndpoint(ENDPIONTS.CANDIDATE).create({CandidateID:0, FirstName:inputs.FirstName, LastName:inputs.LastName})
+    createAPIEndpoint(ENDPIONTS.CANDIDATE).create({CandidateID:0, FirstName:inputs.FirstName, LastName:inputs.LastName, Address:inputs.Address})
     .then(res => {
     })
     .catch(err => console.log(err));
@@ -40,6 +40,12 @@ export default function Signup(props) {
         type="text" 
         name="LastName" 
         value={inputs.LastName || ""} 
+        onChange={handleChange}
+      />
+        <input 
+        type="textarea" 
+        name="Address" 
+        value={inputs.Address || ""} 
         onChange={handleChange}
       />
         </label>
