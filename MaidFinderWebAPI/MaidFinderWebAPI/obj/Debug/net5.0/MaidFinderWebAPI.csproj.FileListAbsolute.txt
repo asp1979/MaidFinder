@@ -159,3 +159,4 @@ D:\GithubRoot\MaidFinder\MaidFinderWebAPI\MaidFinderWebAPI\obj\Debug\net5.0\Maid
 D:\GithubRoot\MaidFinder\MaidFinderWebAPI\MaidFinderWebAPI\obj\Debug\net5.0\ref\MaidFinderWebAPI.dll
 D:\GithubRoot\MaidFinder\MaidFinderWebAPI\MaidFinderWebAPI\obj\Debug\net5.0\MaidFinderWebAPI.pdb
 D:\GithubRoot\MaidFinder\MaidFinderWebAPI\MaidFinderWebAPI\obj\Debug\net5.0\MaidFinderWebAPI.genruntimeconfig.cache
+D:\GithubRoot\MaidFinder\MaidFinderWebAPI\MaidFinderWebAPI\obj\Debug\net5.0\MaidFinderWebAPI.csproj.AssemblyReference.cache
