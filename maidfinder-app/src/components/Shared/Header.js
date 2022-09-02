@@ -1,34 +1,43 @@
-import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import React, { Component } from "react";
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import { Link } from "react-router-dom";
 
 
-class Header extends React.Component {
+class Header extends Component {
   render() {
-    return(
-      <header>
-        
-<div className="bg-yellow">
-       <h3><div className="my-2 mx-1">maidfinder.com.pk</div></h3>
-        </div>
+    return (
+      <div>
+<Navbar
+      collapseOnSelect
+      expand="lg"
+      bg="primary"
+      variant="dark"
+      fixed="top"
+    ><Container>
+    <Navbar.Brand href="/home">MaidFinder</Navbar.Brand>
 
-        <nav>
-        
-            <Link to="/">Home</Link>
+      
+  <Nav>
+<div className="text-white">
+
+      <Link className="text-white" to="/">Home</Link>
           &nbsp; | &nbsp;
-            <Link to="/Profile">Profile</Link>
+            <Link className="text-white" to="/Profile">Profile</Link>
             &nbsp; | &nbsp;
-            <Link to="/About">About</Link>
+            <Link className="text-white" to="/About">About</Link>
             &nbsp; | &nbsp;
-            <Link to="/Signup">Signup</Link>
-      </nav>
+            <Link className="text-white" to="/Signup">Signup</Link>
 
-      <Outlet />
+     
+      </div>
+     </Nav>
+  </Container></Navbar>
+    </div>
+  );
 
-
-
-
-      </header>
-    );
   }
 }
+ 
 export default Header;
