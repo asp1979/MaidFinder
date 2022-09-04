@@ -12,13 +12,14 @@ const Layout = () => {
 
 
 
-<div class="container mt-5">
 
+<section className="content m-5">
+<div className="container-fluid">
  
     <Outlet />
    
 </div>
-
+</section>
 
 
 

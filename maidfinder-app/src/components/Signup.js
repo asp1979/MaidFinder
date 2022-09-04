@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+
 import { useState } from 'react';
 import { createAPIEndpoint, ENDPIONTS } from "./Shared/api";
 
@@ -24,33 +24,61 @@ export default function Signup(props) {
   
   return (
 
-    <form onSubmit={handleSubmit}>
-          <div>
-            {inputs.username}</div>
-      <label>Enter First Name:
-      <input 
-        type="text" 
-        name="FirstName" 
+<div className="row">
+{/* https://www.youtube.com/watch?v=ohbF14IK6hI */}
+<div className="card card-success w-50">
+<div className="card-header">
+<h3 className="card-title">Candidate Signup</h3>
+</div>
+<div className="card-body">
+
+<form onSubmit={handleSubmit}> 
+<input className="form-control m-2" type="text" placeholder="FirstName" name="FirstName" 
         value={inputs.FirstName || ""} 
-        onChange={handleChange}
-      />
-      </label>
-      <label>Enter Last Name:
-      <input 
-        type="text" 
-        name="LastName" 
+        onChange={handleChange}></input>
+<input className="form-control m-2" type="text" placeholder="LastName" name="LastName" 
         value={inputs.LastName || ""} 
-        onChange={handleChange}
-      />
-        <input 
-        type="textarea" 
-        name="Address" 
+        onChange={handleChange}></input>
+<input className="form-control m-2" type="textarea" placeholder="Address" name="Address" 
         value={inputs.Address || ""} 
-        onChange={handleChange}
-      />
-        </label>
+        onChange={handleChange}></input>
+
+
+
+
+
+        
         <input type="submit" />
-    </form>
+
+
+
+
+
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+      
+    
   )
  }
 
