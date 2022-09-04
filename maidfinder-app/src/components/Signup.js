@@ -24,15 +24,18 @@ export default function Signup(props) {
   
   return (
 
-<div className="row">
-{/* https://www.youtube.com/watch?v=ohbF14IK6hI */}
-<div className="card card-success w-50">
-<div className="card-header">
-<h3 className="card-title">Candidate Signup</h3>
-</div>
-<div className="card-body">
+<div className="row justify-content-center">
 
-<form onSubmit={handleSubmit}> 
+
+
+
+
+<div className="card text-dark bg-warning w-50">
+  <h5 className="card-header">Candidate Signup</h5>
+  <div className="card-body">
+    <h5 className="card-title">Enter your information</h5>
+    <p className="card-text">Please fill the given form to register yourself as a MaidFinder Candidate</p>
+    <form onSubmit={handleSubmit}> 
 <input className="form-control m-2" type="text" placeholder="FirstName" name="FirstName" 
         value={inputs.FirstName || ""} 
         onChange={handleChange}></input>
@@ -56,10 +59,12 @@ export default function Signup(props) {
 
 
 </form>
-
+  </div>
 </div>
 
-</div>
+
+
+
 
 </div>
 
