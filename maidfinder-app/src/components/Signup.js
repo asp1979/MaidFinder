@@ -1,17 +1,45 @@
 
-import { useState } from 'react';
+import React, { useState, useEffect } from 'react'
 import { createAPIEndpoint, ENDPIONTS } from "./Shared/api";
+import Select from 'react-select';
+
+
+// const options = [
+//   { value: 'blues', label: 'Blues' },
+//   { value: 'rock', label: 'Rock' },
+//   { value: 'jazz', label: 'Jazz' },
+//   { value: 'orchestra', label: 'Orchestra' } 
+// ];
+let options = this.state.cities.map(function (city) {
+  return { value: city.countryCode, label: city.name };
+})
+
+
+function CityDropdown(props){
+  return(
+    <Select options = {options}  />
+  );
+}
+
 
 
 export default function Signup(props) {
 
+
   const [inputs, setmyInputs] = useState({});
+
+
+
 
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setmyInputs(values => ({...values, [name]: value}))
   }
+
+
+
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -45,9 +73,8 @@ export default function Signup(props) {
 <input className="form-control m-2" type="textarea" placeholder="Address" name="Address" 
         value={inputs.Address || ""} 
         onChange={handleChange}></input>
-
-
-
+                        
+<CityDropdown img="microsoft" />
 
 
         
